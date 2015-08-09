@@ -67,6 +67,7 @@ module formFor {
     templateUrl:string = 'form-for/templates/submit-button.html';
 
     scope:any = {
+      buttonClass: '@',
       disable: '=',
       icon: '@',
       label: '@'
@@ -83,7 +84,6 @@ module formFor {
          $attributes:ng.IAttributes,
          formForController:FormForController):void {
 
-      $scope['buttonClass'] = $attributes['buttonClass'];
       $scope.tabIndex = $attributes['tabIndex'] || 0;
 
       $scope.$watch('label', function (value) {
